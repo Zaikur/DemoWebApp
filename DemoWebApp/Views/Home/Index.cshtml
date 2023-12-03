@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section Header {
+    <h1>Welcome!</h1>
+}
+
+<div>
+    <p>Enjoy browsing this website</p>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="list-group">
+                <a asp-controller="Home" asp-action="About"
+                   class="list-group-item">About this webpage</a>
+                <a asp-controller="Home" asp-action="contact"
+                   class="list-group-item">Contact me</a>
+            </div>
+        </div>
+    </div>
+</div>

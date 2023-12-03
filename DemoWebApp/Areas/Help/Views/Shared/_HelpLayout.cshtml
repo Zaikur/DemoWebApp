@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "_Layout";
+    string controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    string action = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
+}
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link text-dark @(controller == "Home" && action == "Index" ? "active" : "")" asp-area="Help" asp-controller="Home" asp-action="Index">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark @(controller == "Tutorial" && action == "Index" ? "active" : "")" asp-area="Help" asp-controller="Tutorial" asp-action="Index" asp-route-id="1">Tutorial</a>
+    </li>
+</ul>
+
+@section Header {
+    <h1>Help Page</h1>
+    <br />
+}
+
+<div class="container">
+    <br />
+    <h2>@ViewBag.H2</h2>
+</div>
+
+@RenderBody()

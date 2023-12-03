@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    ViewBag.Header = "Contact Me";
+}
+
+@model DemoWebApp.Models.ContactModel
+
+@section Header {
+    <h1>Contact Me</h1>
+}
+
+<div class="row">
+    <div class="col-4">Phone</div>
+    <div class="col-4"><a href="tel:@Model.Phone">@Model.Phone</a></div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-4">Email</div>
+    <div class="col-4"><a href="mailto:@Model.Email">@Model.Email</a></div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-4">GitHub</div>
+    <div class="col-4"><a href="@Model.GitHubUrl" target="_blank">@Model.GitHubUrl</a></div>
+</div>
+<hr />
