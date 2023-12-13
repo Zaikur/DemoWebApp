@@ -20,8 +20,8 @@ namespace DemoWebApp.Controllers
         {
             var contact = new ContactModel
             {
-                Phone = "605-240-0395",
-                Email = "QuintonCNelson@hotmail.com",
+                Phone = "555-555-5555",
+                Email = "example@hotmail.com",
                 GitHubUrl = "https://github.com/Zaikur"
             };
 
